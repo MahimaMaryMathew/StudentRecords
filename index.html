@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records Management System</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Records Portal</h1>
+            
+        </header>
+        <section class="stats-container">
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p id="stat-total">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Average Marks</h3>
+                <p id="stat-average">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Class Topper</h3>
+                <p id="stat-topper">-</p>
+            </div>
+        </section>
+
+       
+        <section class="controls-container">
+            <div class="control-group">
+                <label for="search-input">Search by Name</label>
+                <input type="text" id="search-input" placeholder="Type name..." autocomplete="off">
+            </div>
+
+            <div class="control-group">
+                <label for="filter-course">Filter by Course</label>
+                <select id="filter-course">
+                    <option value="ALL">All Courses</option>
+                    <option value="Potions">Potions</option>
+                    <option value="Defense Against the Dark Arts">Defense Against the Dark Arts</option>
+                    <option value="Herbology">Herbology</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="sort-select">Sort By</label>
+                <select id="sort-select">
+                    <option value="default">Default Order</option>
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="marks-high">Marks (High to Low)</option>
+                    <option value="marks-low">Marks (Low to High)</option>
+                </select>
+            </div>
+        </section>
+
+ 
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>μID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Marks</th>
+                    </tr>
+                </thead>
+                <tbody id="student-table-body">
+                    
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
